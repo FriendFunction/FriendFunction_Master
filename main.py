@@ -1,17 +1,91 @@
-# This is a sample Python script.
+# Import turtle package
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import turtle
 
+# Creating a turtle object(pen)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+pen = turtle.Turtle()
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-    print("Roshan")
+# Defining a method to draw curve
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+def curve():
+    for i in range(200):
+        # Defining step by step curve motion
+
+        pen.right(1)
+
+        pen.forward(1)
+
+    # Defining method to draw a full heart
+
+
+def heart():
+    # Set the fill color to red
+
+    pen.fillcolor('red')
+
+    # Start filling the color
+
+    pen.begin_fill()
+
+    # Draw the left line
+
+    pen.left(140)
+
+    pen.forward(113)
+
+    # Draw the left curve
+
+    curve()
+
+    pen.left(120)
+
+    # Draw the right curve
+
+    curve()
+
+    # Draw the right line
+
+    pen.forward(112)
+
+    # Ending the filling of the color
+
+    pen.end_fill()
+
+
+# Defining method to write text
+
+def txt():
+    # Move turtle to air
+
+    pen.up()
+
+    # Move turtle to a given position
+
+    pen.setpos(-70, 105)
+
+    # Move the turtle to the ground
+
+    pen.down()
+
+    # Set the text color to lightgreen
+
+    pen.color('green')
+
+    # Write the specified text in
+
+    # specified font style and size
+
+    pen.write("Friend Function", font=(
+        "Verdana", 12, "bold"))
+
+
+# Draw a heart
+heart()
+
+# Write text
+txt()
+
+# To hide turtle
+pen.ht()
